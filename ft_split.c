@@ -6,7 +6,7 @@
 /*   By: dobrooks <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 11:05:15 by dobrooks          #+#    #+#             */
-/*   Updated: 2020/11/19 00:00:25 by dobrooks         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:14:15 by dobrooks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	ft_len(char const *s, char c, int i)
 	return (len);
 }
 
-static char	**free_res(char **res)
+static char	**ft_free_res(char **res)
 {
 	while (*res)
 		free(*res++);
@@ -83,7 +83,7 @@ char		**ft_split(char const *s, char c)
 	{
 		i = ft_first_symb(s, c, i);
 		if (!(res[word] = (char*)malloc(sizeof(char) * (ft_len(s, c, i) + 1))))
-			return (free_res(res));
+			return (ft_free_res(res));
 		j = 0;
 		while (s[i] && (s[i] != c))
 			res[word][j++] = s[i++];

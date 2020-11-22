@@ -6,13 +6,13 @@
 /*   By: dobrooks <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:52:55 by dobrooks          #+#    #+#             */
-/*   Updated: 2020/11/16 20:46:01 by dobrooks         ###   ########.fr       */
+/*   Updated: 2020/11/19 22:45:13 by dobrooks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check_set(char c, char const *set)
+static int	ft_check_set(char c, char const *set)
 {
 	while (*set)
 		if (*set++ == c)
@@ -31,13 +31,13 @@ char		*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	len = 0;
 	start = -1;
-	while (s1[i] && check_set(s1[i], set))
+	while (s1[i] && ft_check_set(s1[i], set))
 		i++;
 	start = i;
 	while (s1[i])
 		i++;
 	i--;
-	while (check_set(s1[i], set))
+	while (ft_check_set(s1[i], set))
 		i--;
 	len = i - start + 1;
 	return (ft_substr(s1, start, len));

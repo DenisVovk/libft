@@ -6,12 +6,11 @@
 /*   By: dobrooks <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 23:34:49 by dobrooks          #+#    #+#             */
-/*   Updated: 2020/11/14 15:50:15 by dobrooks         ###   ########.fr       */
+/*   Updated: 2020/11/19 22:45:36 by dobrooks         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
